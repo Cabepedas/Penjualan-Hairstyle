@@ -1,0 +1,1 @@
+jangan lupa di pull dan push setelah commit.
