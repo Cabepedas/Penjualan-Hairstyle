@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="../Gambar/Icon.png"/>
+  <marquee><title>Penjualan-Hairstyle</title></marquee>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #ff0000;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;	
+      animation-duration: 1s;	
+      -webkit-animation-duration: 1s;
+      visibility: visible;			
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }	
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+<a class="navbar-brand" href="#myPage">Penjualan-Hairstyle</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="beranda.html">BERANDA</a></li>
+        <li><a href="Info.html">INFO</a></li>
+        
+        
+        <li><a href="Produk.html">PRODUK</a></li>
+        
+        <li><a href="TentangKami.html">TENTANG KAMI</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+      <img src="../Gambar/Slider/1.jpg" alt="Image">
+        <div class="carousel-caption">
+        <h3></span></h3>
+      </div>
+      </div>
+      <div class="item">
+      <img src="../Gambar/Slider/1.jpg" alt="Image">
+        <div class="carousel-caption">
+        <h3></span></h3>
+      </div>
+      </div>
+      <div class="item">
+      <img src="../Gambar/slider/1.jpg" alt="Image">
+        <div class="carousel-caption">
+        <h3></span></h3>
+      </div>
+      </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<div class="container-fluid bg-3 text-center">    
+  <h1><font color="#FF0000">Gaya Rambut Yang Trendy</font></h1><br>
+  <div class="row">
+    <div class="col-sm-3">
+     <img src="../Gambar/Produk/Pomade 1.jpg" alt="Cinque Terre" width="259" height="194" class="img-thumbnail"> 
+    </div>
+    <div class="col-sm-3">
+    <h3>Emo</h3><hr> 
+      <p align="justify">harga terjangkau dan bagus lagi</span></p>
+    </div>
+    <div class="col-sm-3">
+      <img src="../Gambar/Kelebihan/Afro.jpg" alt="Cinque Terre" width="349" height="225" class="img-thumbnail">
+    </div>
+    <div class="col-sm-3">
+    <h3>Afro</h3><hr> 
+      <p align="justify">Semua pasti tahu kalau gaya rambut ini dipelopori oleh bangsa kulit hitam. Gaya rambut ini sangat popular dikalangan pria beranbut keriting pada era 70-an. Sampai saat ini masih banyak yang memakai rambut gaya ini, diperkirakan tahun 2010 akan kembali menjadi tren Selebriti Hollywood yang sering tampil dengan gaya afro ini seperti Beyonce, Jennifer Hudson dan Halle Berry. (Usop said,"sejarah afro yang sebenarnya belum diketahui sampai sekarang hal itu belum bisa dijelaskan oleh ilmu pengetahuan apakah gaya rambut afro yang menciptakan seorang juara atau seorang juara yang menciptakan gaya rambut afro" .</span></p>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="../Gambar/Kelebihan/Punk.jpg" alt="Cinque Terre" width="289" height="353" class="img-thumbnail">
+    </div>
+    <div class="col-sm-3">
+    <h3>Punk</h3><hr> 
+      <p align="justify">Gaya rambut mohawk selalu memiliki tempat dalam sejarah budaya. Mulai dari kaum indian asli Amerika, sampai para punk rocker yang masih sering kita saksikan aksinya di panggung. Mereka yang memiliki gaya rambut mohawk selalu jadi pusat perhatian. Punk merupakan sub-budaya yang lahir di London, Inggris. Pada awalnya, kelompok punk selalu dikacaukan oleh golongan skinhead. Namun, sejak tahun 1980-an, saat punk merajalela di Amerika, golongan punk dan skinhead seolah-olah menyatu, karena mempunyai semangat yang sama. Punk juga bisa berarti ideologi hidup yang mencakup aspek sosial dan politik.
+Gerakan anak muda yang diawali oleh anak-anak kelas pekerja ini dengan segera merambah Amerika yang mengalami masalah ekonomi dan keuangan yang dipicu oleh kemerosotan moral oleh para tokoh politik yang memicu tingkat pengangguran dan kriminalitas yang tinggi. Punk berusaha menyindir para penguasa dengan caranya sendiri.
+</span></p>
+    </div>
+    <div class="col-sm-3">
+      <img src="../Gambar/Kelebihan/Gimbal.jpg" alt="Cinque Terre" width="248" height="253" class="img-thumbnail">
+    </div>
+    <div class="col-sm-3">
+    <h3>Gimbal</h3><hr> 
+      <p align="justify">Rambut gimbal atau lazim disebut "dreadlocks" menjadi titik perhatian dalam fenomena reggae. Saat ini dreadlock selalu diidentikkan dengan musik reggae, sehingga secara kaprah orang menganggap bahwa para pemusik reggae yang melahirkan gaya rambut bersilang-belit (locks) itu. Padahal jauh sebelum menjadi gaya, rambut gimbal telah menyusuri sejarah panjang. Konon, rambut gimbal sudah dikenal sejak tahun 2500 SM. Sosok Tutankhamen, seorang fir'aun dari masa Mesir Kuno, digambarkan memelihara rambut gimbal. Demikian juga Dewa Shiwa dalam agama Hindu. Secara kultural, sejak beratus tahun yang lalu banyak suku asli di Afrika, Australia dan New Guinea yang dikenal dengan rambut gimbalnya. Di daerah Dieng, Wonosobo hingga kini masih tersisa adat memelihara rambut gimbal para balita sebagai ungkapan spiritualitas tradisional.
+</span></p>
+</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<hr>
+<li><a href="kami.html">Tim Kami</a></li>
+<div class="container active">               
+  <ul class="breadcrumb">
+  </ul>
+</div>
+    </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<hr>
+<div class="container active">               
+  <ul class="breadcrumb">
+    <li>Copyright &copy 2016 <strong>Penjualan-Hairstyle</strong></p></li>
+    <li><a href="kami.html">Tim Kami</a></li>
+    <li><a href="#">Peta Situs</a></li>       
+  </ul>
+</div>
