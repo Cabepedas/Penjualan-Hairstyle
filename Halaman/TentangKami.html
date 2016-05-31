@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <link rel="shortcut icon" href=""/>
-  <marquee><title>Tim Kami</title></marquee>
+  <marquee><title>Tentang Kami</title></marquee>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -207,38 +207,74 @@
         <li><a href="beranda.html">BERANDA</a></li>
         <li><a href="Info.html">INFO</a></li>
         <li><a href="Produk.html">PRODUK</a></li>
-        <li><a href="TentangKami.html">TENTANG KAMI</a></li>
+        <li class="active"><a href="TentangKami.html">TENTANG KAMI</a></li>
       </ul>
     </div>
   </div>
 </nav>
 <!-- Container (Contact Section) -->
 <br><br>
-<div class="container text-center"> <br>
-  <h2>KAMI</h2><hr>
-<div class="row">
-    <div class="col-sm-4">
-       <img src="../Gambar/Kami/1.jpg" class="img-circle" alt="Cinque Terre">
-      <h3><center>MUWARDIN SIHOTANG</center></h3>
-    </div>
-    <div class="col-sm-4">
-      <img src="../Gambar/Kami/2.jpg" class="img-circle" alt="Cinque Terre">
-      <h3><center>MUHAMMAD AGUNG PRATAMA</center></h3>
-    </div>
-    <div class="col-sm-4">
-      <img src="../Gambar/Kami/3.jpg" class="img-circle" alt="Cinque Terre">
-      <h3><center>SALOMO SIMANJUNTAK</center></h3>
-    </div>
-    </div>
+<div class="container text-justify">
+  <h2>TENTANG KAMI</h2>
+  <hr>
+  <H1>HARUS DI ISI </H1>
 </div>
-    </body>
-    </html>
+<div class="container text-left">    
+  <h2>KONTAK</h2><hr><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p><b>Email.</b></p>
+      <p><span class="glyphicon glyphicon-envelope"></span> Muwardinsihotang@gmail.com</p>
+    </div>
+    <div class="col-sm-4"> 
+      <p><b>Telp</b></p>
+    <p><span class="glyphicon glyphicon-earphone"></span> 0821 6844 5364</p> 
+    <p><span class="glyphicon glyphicon-phone"></span> 0821 6464 4040</p>     
+    </div>
+    <div class="col-sm-4">
+      <p><b>Sosial Media</b></p>
+      <img src="../Gambar/Kontak/fb.png" class="img-rounded" alt="Cinque Terre" width="20" height="20"> HairStyle<br>
+      <img src="../Gambar/Kontak/ig.png" class="img-rounded" alt="Cinque Terre" width="20" height="20"> HairStyle<br>
+      <img src="../Gambar/Kontak/tw.png" class="img-rounded" alt="Cinque Terre" width="20" height="20"> HairStyle 	
+  </div>
+</div><br><hr>
+<div id="googleMap" style="height:400px;width:100%;"></div>
+
+<!-- Add Google Maps -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(3.610047, 98.706377);
+
+function initialize() {
+var mapProp = {
+  center:myCenter,
+  zoom:17,
+  scrollwheel:false,
+  draggable:false,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</div>
+</div>
+</body>
+</html>
 <hr>
 <div class="container active">               
   <ul class="breadcrumb">
     <li>Copyright &copy 2016 <strong>HAIRSTYLE</strong></p></li>
-<li class="active">Tim Kami</a></li>
-    <li><a href="#">Peta Situs</a></li>        
+<li><a href="kami.html">Tim Kami</a></li>
+    <li><a href="#">Peta Situs</a></li>         
   </ul>
 </div>
 
